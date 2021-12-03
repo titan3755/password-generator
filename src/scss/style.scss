@@ -1,0 +1,124 @@
+@import "mixins";
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+}
+.psgen-main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #333399;
+}
+.psgen-card {
+    @include display-type(flex, column, flex-start, center);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(19, 0, 71);
+    width: 390px;
+    height: 500px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: rgba(255, 255, 255, 0.02) 0px 1px 3pxrgba(255, 255, 255, 0.15) 0.15;
+}
+.psgen-titlebar {
+    @include m-y(30px, 30px);
+    width: 100%;
+    h4 {
+        text-align: center;
+        font-family: 'Outfit', sans-serif;
+        font-size: 30px;
+        margin: 0;
+    }
+}
+.psgen-output {
+    @include display-type();
+    background-color: darken($color: rgb(19, 0, 71), $amount: 20);
+    width: 80%;
+    min-height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.psgen-display {
+    @include display-type(flex, row, flex-start, center);
+    font-family: 'Baloo 2', cursive;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+        height: 4px;
+        background-color: white;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgb(68, 68, 68);
+    }
+}
+.psgen-copyps {
+    @include display-type(flex, row, flex-end, center);
+    width: 30px;
+    button {
+        @include display-type();
+        padding: 12px;
+        color: white;
+        background-color: royalblue;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        svg {
+            margin: 0;
+        }
+        &:hover {
+            background-color: darken($color: royalblue, $amount: 30);
+        }
+    }
+}
+.psgen-controls {
+    @include display-type(flex, column);
+    @include m-y(20px, 20px);
+    width: 100%;
+}
+.psgen-generate {
+    @include display-type();
+    width: 100%;
+    button {
+        border: none;
+        border-radius: 5px;
+        background-color: #333399;
+        width: 200px;
+        color: white;
+        padding: 10px;
+        font-family: 'Baloo 2', cursive;
+        font-size: 22px;
+        cursor: pointer;
+        transition: 250ms ease-in-out;
+        &:hover {
+            background-color: royalblue;
+        }
+    }
+}
+.option {
+    @include display-type();
+    width: 80%;
+}
+.option-label {
+    width: 100%;
+    p {
+        font-size: 15px;
+        font-family: 'Varela Round', sans-serif;
+        text-align: left;
+    }
+}
+.option-inputs {
+    @include display-type(flex, row, flex-end, center);
+    text-align: right;
+    width: 100px;
+    input {
+        width: 40px;
+    }
+}

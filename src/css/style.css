@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.psgen-main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #333399;
+}
+
+.psgen-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #130047;
+  width: 390px;
+  height: 500px;
+  border-radius: 8px;
+  color: white;
+  box-shadow: rgba(255, 255, 255, 0.02) 0px 1px 3pxrgba 255, 255, 255, 0.15 0.15;
+}
+
+.psgen-titlebar {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.psgen-titlebar h4 {
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-size: 30px;
+  margin: 0;
+}
+
+.psgen-output {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 80%;
+  min-height: 30px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.psgen-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Baloo 2", cursive;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.psgen-display::-webkit-scrollbar {
+  height: 4px;
+  background-color: white;
+}
+.psgen-display::-webkit-scrollbar-thumb {
+  background-color: #444444;
+}
+
+.psgen-copyps {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 30px;
+}
+.psgen-copyps button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  color: white;
+  background-color: royalblue;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.psgen-copyps button svg {
+  margin: 0;
+}
+.psgen-copyps button:hover {
+  background-color: #132c76;
+}
+
+.psgen-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.psgen-generate {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.psgen-generate button {
+  border: none;
+  border-radius: 5px;
+  background-color: #333399;
+  width: 200px;
+  color: white;
+  padding: 10px;
+  font-family: "Baloo 2", cursive;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+.psgen-generate button:hover {
+  background-color: royalblue;
+}
+
+.option {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.option-label {
+  width: 100%;
+}
+.option-label p {
+  font-size: 15px;
+  font-family: "Varela Round", sans-serif;
+  text-align: left;
+}
+
+.option-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  width: 100px;
+}
+.option-inputs input {
+  width: 40px;
+}
+
+/*# sourceMappingURL=style.css.map */
